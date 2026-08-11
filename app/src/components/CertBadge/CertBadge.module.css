@@ -1,0 +1,3 @@
+.wrap { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; }
+.badge { object-fit: contain; display: block; }
+.label { font-family: var(--font-ui); font-weight: 600; font-size: 11px; letter-spacing: .6px; color: var(--text-2); text-transform: uppercase; }

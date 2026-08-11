@@ -4,6 +4,10 @@ import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { Button, PillowButton } from '../../components/Button/Button';
 import { SegmentedControl } from '../../components/SegmentedControl/SegmentedControl';
 import { Chip } from '../../components/Chip/Chip';
+import { Avatar } from '../../components/Avatar/Avatar';
+import { avatarUrl } from '../../assets/avatars';
+import { CertBadge } from '../../components/CertBadge/CertBadge';
+import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles } from 'lucide-react';
@@ -55,6 +59,23 @@ export function Gallery() {
           <Chip icon={<Sparkles />}>Similar to your best supplier</Chip>
           <Chip icon={<Sparkles />}>Matches your capacity &amp; certs</Chip>
           <Chip tone="gold">Best match</Chip>
+        </GallerySection>
+        <GallerySection title="Avatars">
+          <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+            <Avatar src={avatarUrl('loomcraft')} name="Loomcraft" size={72} />
+            <Avatar src={avatarUrl('indigo')} name="Indigo Mills" size={56} />
+            <Avatar name="Noor & Co." size={56} />{/* initials fallback */}
+          </div>
+        </GallerySection>
+        <GallerySection title="Cert badges">
+          <div style={{ display: 'flex', gap: 20 }}>
+            <CertBadge label="GOTS" /><CertBadge label="OEKO-TEX" /><CertBadge label="SMETA" /><CertBadge label="WRAP" />
+          </div>
+        </GallerySection>
+        <GallerySection title="Mandala watermark">
+          <div style={{ position: 'relative', height: 140, width: '100%' }}>
+            <MandalaBg style={{ opacity: .28 }} />
+          </div>
         </GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>

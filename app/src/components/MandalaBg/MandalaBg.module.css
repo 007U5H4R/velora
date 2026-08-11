@@ -1,0 +1,5 @@
+.mandala {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 260px; height: auto; opacity: .18; pointer-events: none; user-select: none;
+  z-index: 0;
+}

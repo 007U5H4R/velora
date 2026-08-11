@@ -1,0 +1,9 @@
+.avatar {
+  border-radius: var(--r-pill); overflow: hidden; flex: 0 0 auto;
+  background: var(--raised);
+  border: 2px solid rgba(227,172,73,.65);
+  box-shadow: 0 0 14px rgba(227,172,73,.30), var(--sh-raised);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.initials { font-family: var(--font-ui); font-weight: 600; color: var(--gold); }
