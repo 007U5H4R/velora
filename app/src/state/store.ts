@@ -60,9 +60,9 @@ export function createStore(initial: Partial<AppState> = {}) {
   }));
 }
 
-// Default React-bound store, empty-seed for now (Task 1.4 will re-seed it).
-// Do NOT import from ../data — it doesn't exist yet; keep the build green.
-export const appStore = createStore();
+// Default React-bound store, seeded from mock data.
+import { seed } from '../data';
+export const appStore = createStore(seed);
 export function useStore<T>(sel: (s: AppState) => T): T {
   return useZustandStore(appStore, sel);
 }

@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { createStore } from './store';
+import { createStore, appStore } from './store';
 import type { Vendor, Rfp } from './types';
 
 const v = (id: string): Vendor => ({
@@ -45,4 +45,12 @@ describe('store loop', () => {
     s.getState().switchRole();
     expect(s.getState().role).toBe('manufacturer');
   });
+});
+
+test('appStore is seeded from mock data', () => {
+  const s = appStore.getState();
+  expect(s.vendorDeck[0].name).toBe('Loomcraft');
+  expect(s.vendorDeck.length).toBeGreaterThanOrEqual(10);
+  expect(s.rfps.find(r => r.id === 'rfp-tees')!.bidIds).toContain('bid-loomcraft');
+  expect(s.chat['v-loomcraft'].messages.length).toBe(5);
 });
