@@ -13,6 +13,7 @@ import { Stepper } from '../../components/Stepper/Stepper';
 import { Toggle } from '../../components/Toggle/Toggle';
 import { BottomNav } from '../../components/BottomNav/BottomNav';
 import { brandNav } from '../../components/BottomNav/navItems';
+import { Gauge } from '../../components/Gauge/Gauge';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
@@ -109,6 +110,13 @@ export function Gallery() {
         </GallerySection>
         <GallerySection title="Stat · Stepper · Toggle"><ControlsDemo /></GallerySection>
         <GallerySection title="Bottom nav (role-aware)"><NavDemo /></GallerySection>
+        <GallerySection title="Trust gauge">
+          <div style={{ display: 'flex', gap: 28, alignItems: 'center' }}>
+            <Gauge score={94} variant="hero" size={140} />
+            <Gauge score={88} variant="mini" size={56} />
+            <Gauge score={83} variant="mini" size={56} />
+          </div>
+        </GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>
     </PhoneFrame>
