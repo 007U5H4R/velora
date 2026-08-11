@@ -4,7 +4,7 @@ import { PhoneFrame } from '../../components/PhoneFrame/PhoneFrame';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { useStore } from '../../state/store';
 import type { Role } from '../../state/types';
-import mandala from '../../assets/mandala-gold.png';
+import mandala from '../../assets/mandala-motif.png';
 import brandGif from '../../assets/role-select/brand.gif';
 import brandStill from '../../assets/role-select/brand_still.png';
 import mfgGif from '../../assets/role-select/manufacturer.gif';

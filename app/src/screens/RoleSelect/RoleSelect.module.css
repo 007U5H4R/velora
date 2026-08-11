@@ -10,9 +10,10 @@
 .topBar { position: relative; z-index: 1; flex: none; }
 
 .mandala {
-  position: absolute; top: 0; right: -18px;
-  width: 100px; height: 100px;
-  opacity: .6;
+  position: absolute; top: -6px; right: -22px;
+  width: 120px; height: 120px;          /* square source (260×260) → uniform, no skew */
+  opacity: .85;
+  mix-blend-mode: screen;               /* drop the motif's dark bg, keep only the gold */
   z-index: 0; pointer-events: none; user-select: none;
 }
 
@@ -66,7 +67,10 @@
 .illo { position: relative; z-index: 1; width: 160px; height: 160px; object-fit: contain; display: block; }
 
 .cardTitle { font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--text-1); }
-.cardSubtitle { font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--text-3); }
+.cardSubtitle {
+  font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--text-3);
+  min-height: 2.7em;            /* reserve 2 lines so the 1-line (Brand) & 2-line (Manufacturer) cards match height */
+}
 
 .footer {
   margin-top: auto; padding-top: 24px;
