@@ -185,6 +185,11 @@ export function Gallery() {
             07 Vendor Discover →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 08 — Submit Bid">
+          <Link to="/submit-bid/rfp-tees" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            08 Submit Bid →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
