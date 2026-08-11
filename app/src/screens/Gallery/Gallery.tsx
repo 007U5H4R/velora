@@ -195,6 +195,11 @@ export function Gallery() {
             09 Bids Received →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 10 — Chat">
+          <Link to="/chat/v-loomcraft" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            10 Chat →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>

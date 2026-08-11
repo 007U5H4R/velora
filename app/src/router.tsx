@@ -8,6 +8,7 @@ import { BuyerRFPs } from './screens/BuyerRFPs/BuyerRFPs';
 import { VendorDiscover } from './screens/VendorDiscover/VendorDiscover';
 import { SubmitBid } from './screens/SubmitBid/SubmitBid';
 import { BidsReceived } from './screens/BidsReceived/BidsReceived';
+import { Chat } from './screens/Chat/Chat';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Gallery /> },
@@ -21,4 +22,6 @@ export const router = createBrowserRouter([
   { path: '/submit-bid/:rfpId', element: <SubmitBid /> },
   { path: '/bids', element: <BidsReceived /> },
   { path: '/bids/:rfpId', element: <BidsReceived /> },
+  { path: '/chat', element: <Chat /> },
+  { path: '/chat/:vendorId', element: <Chat /> },
 ]);
