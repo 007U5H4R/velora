@@ -175,6 +175,11 @@ export function Gallery() {
             Open Create RFP →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 06 — Buyer RFPs">
+          <Link to="/rfps" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            Open Buyer RFPs →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
