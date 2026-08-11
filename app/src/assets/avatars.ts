@@ -10,6 +10,10 @@ import ratnaImg from './avatars/ratna.png';
 import surajImg from './avatars/suraj.png';
 import vastraImg from './avatars/vastra.png';
 import angaImg from './avatars/anga.png';
+import aaravImg from './avatars/aarav.png';
+import miraImg from './avatars/mira.png';
+import kalaImg from './avatars/kala.png';
+import rheaImg from './avatars/rhea.png';
 
 // Kalighat pat-chitra avatars: Noor (buyer portrait) + one distinct folk-art
 // creature per deck vendor. Inbound-likes + authored brands fall back to the
@@ -26,6 +30,10 @@ const map: Record<string, string> = {
   suraj: surajImg,
   vastra: vastraImg,
   anga: angaImg,
+  aarav: aaravImg,
+  mira: miraImg,
+  kala: kalaImg,
+  rhea: rheaImg,
 };
 
 export function avatarUrl(slug?: string): string {
