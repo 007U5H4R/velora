@@ -9,6 +9,7 @@ import { VendorDiscover } from './screens/VendorDiscover/VendorDiscover';
 import { SubmitBid } from './screens/SubmitBid/SubmitBid';
 import { BidsReceived } from './screens/BidsReceived/BidsReceived';
 import { Chat } from './screens/Chat/Chat';
+import { Profile } from './screens/Profile/Profile';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Gallery /> },
@@ -24,4 +25,5 @@ export const router = createBrowserRouter([
   { path: '/bids/:rfpId', element: <BidsReceived /> },
   { path: '/chat', element: <Chat /> },
   { path: '/chat/:vendorId', element: <Chat /> },
+  { path: '/profile', element: <Profile /> },
 ]);

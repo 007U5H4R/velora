@@ -200,6 +200,11 @@ export function Gallery() {
             10 Chat →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 11 — Profile">
+          <Link to="/profile" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            11 Profile →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
