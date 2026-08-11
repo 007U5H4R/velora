@@ -1,0 +1,10 @@
+.bar {
+  height: 44px; flex: 0 0 44px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 20px; color: var(--text-1);
+  font-family: var(--font-ui); font-weight: 600; font-size: 15px;
+  letter-spacing: 0.2px;
+}
+.right { display: inline-flex; align-items: center; gap: 6px; }
+.pct { font-size: 14px; }
+.batt { display: block; }

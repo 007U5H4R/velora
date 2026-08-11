@@ -1,0 +1,28 @@
+.backdrop {
+  min-height: 100vh; min-height: 100dvh;
+  background: var(--canvas);
+  display: flex; justify-content: center; align-items: flex-start;
+}
+.bezel { width: min(390px, 100vw); }
+.screen {
+  width: 100%;
+  min-height: 100vh; min-height: 100dvh;
+  background: var(--canvas);
+  overflow-x: hidden;              /* no horizontal page scroll, ever */
+  position: relative;
+  display: flex; flex-direction: column;
+}
+/* Tablet/desktop: center vertically + premium device bezel */
+@media (min-width: 768px) {
+  .backdrop { align-items: center; padding: 32px 0; }
+  .bezel {
+    width: 402px; padding: 6px;
+    background: #101013;
+    border-radius: 52px;
+    box-shadow: 0 40px 120px rgba(0,0,0,.62), 0 0 0 1px rgba(255,255,255,.03);
+  }
+  .screen {
+    min-height: 844px; height: 844px;
+    border-radius: 46px; overflow: hidden; overflow-y: auto;
+  }
+}
