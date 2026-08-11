@@ -1,0 +1,11 @@
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 15px; border-radius: var(--r-pill);
+  background: var(--raised); box-shadow: var(--sh-raised);
+  font-family: var(--font-ui); font-weight: 500; font-size: 13px; color: var(--text-1);
+  white-space: nowrap;
+}
+.icon { display: inline-flex; color: var(--ember-a); }
+.icon > svg { width: 16px; height: 16px; }
+.gold { color: var(--gold); }
+.gold .icon { color: var(--gold); }

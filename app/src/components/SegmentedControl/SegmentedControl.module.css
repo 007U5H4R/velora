@@ -1,0 +1,14 @@
+.track {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 4px; border-radius: var(--r-pill);
+  background: var(--well); box-shadow: var(--sh-sunken);
+}
+.seg {
+  border: none; background: transparent; cursor: pointer;
+  font-family: var(--font-ui); font-weight: 600; font-size: 14px; color: var(--text-2);
+  padding: 9px 18px; border-radius: var(--r-pill); white-space: nowrap;
+  transition: color .15s ease;
+}
+.active { background: var(--grad-ember-vert); color: var(--on-ember); --glow: rgba(232,66,10,.5); }
+.count { opacity: .8; font-weight: 500; }
+.active .count { color: var(--on-ember); }
