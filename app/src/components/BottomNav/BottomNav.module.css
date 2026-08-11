@@ -1,0 +1,22 @@
+.dock {
+  display: flex; align-items: stretch; justify-content: space-between;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  background: var(--canvas);
+  box-shadow: 0 -1px 0 rgba(255,255,255,.04);
+}
+.tile {
+  flex: 1; border: none; background: transparent; cursor: pointer;
+  display: inline-flex; flex-direction: column; align-items: center; gap: 5px;
+  color: var(--text-2); font-family: var(--font-ui); font-weight: 500; font-size: 11px;
+  transition: color .15s ease;
+}
+.iconWrap { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 34px; border-radius: var(--r-tile); }
+.iconWrap > svg { width: 23px; height: 23px; }
+.active { color: var(--ember-a); }
+.active .iconWrap { background: rgba(255,106,0,.12); box-shadow: var(--sh-raised); }
+.label { line-height: 1; }
+.badge {
+  position: absolute; top: -4px; right: -2px; min-width: 16px; height: 16px; padding: 0 4px;
+  border-radius: var(--r-pill); background: var(--grad-ember); color: var(--on-ember);
+  font-size: 10px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center;
+}

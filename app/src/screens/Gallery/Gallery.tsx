@@ -11,6 +11,8 @@ import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import { Stat, StatGroup } from '../../components/Stat/Stat';
 import { Stepper } from '../../components/Stepper/Stepper';
 import { Toggle } from '../../components/Toggle/Toggle';
+import { BottomNav } from '../../components/BottomNav/BottomNav';
+import { brandNav } from '../../components/BottomNav/navItems';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
@@ -50,6 +52,15 @@ function SegDemo() {
       <SegmentedControl value={filter} onChange={setFilter}
         segments={[{ label: 'Active', value: 'active', count: 2 }, { label: 'Drafts', value: 'drafts', count: 1 }, { label: 'Closed', value: 'closed' }]} />
     </>
+  );
+}
+
+function NavDemo() {
+  const [active, setActive] = useState('discover');
+  return (
+    <div style={{ width: '100%', border: '1px solid rgba(255,255,255,.06)', borderRadius: 16, overflow: 'hidden' }}>
+      <BottomNav items={brandNav} activeId={active} badges={{ matches: 6 }} onNavigate={(id) => setActive(id)} />
+    </div>
   );
 }
 
@@ -97,6 +108,7 @@ export function Gallery() {
           </div>
         </GallerySection>
         <GallerySection title="Stat · Stepper · Toggle"><ControlsDemo /></GallerySection>
+        <GallerySection title="Bottom nav (role-aware)"><NavDemo /></GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>
     </PhoneFrame>
