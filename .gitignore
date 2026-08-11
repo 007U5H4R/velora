@@ -4,3 +4,11 @@ dist/
 *.log
 app/node_modules/
 app/dist/
+
+# Internal SDD orchestration artifacts (briefs, reports, ledger) — kept local, not published
+.superpowers/
+# Local env with real keys — never commit
+.env
+.env.local
+app/.env
+app/.env.local
