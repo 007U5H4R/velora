@@ -61,4 +61,6 @@
   font-family: var(--font-ui); font-size: 14px; color: var(--text-1); height: 100%; }
 .input::placeholder { color: var(--text-3); }
 .sendBtn { width: 44px; height: 44px; border-radius: 999px; border: none; display: grid; place-items: center;
-  background: var(--grad-ember); color: var(--on-ember); cursor: pointer; flex: none; }
+  background: var(--grad-ember); color: var(--on-ember); cursor: pointer; flex: none;
+  transition: transform .12s ease; }
+.sendBtn:active { transform: translateY(1px) scale(.98); }

@@ -20,13 +20,17 @@
   font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--ember-a); }
 
 .inbound { position: relative; z-index: 1; display: flex; gap: 14px; overflow-x: auto; padding-bottom: 4px; }
-.inbAv { border: none; background: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 7px; flex: none; }
+.inbAv { border: none; background: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 7px; flex: none;
+  transition: transform .12s ease; }
+.inbAv:active { transform: translateY(1px) scale(.98); }
 .inbName { font-family: var(--font-ui); font-size: 12px; color: var(--text-2); }
 
 .list { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 12px; }
 .row { text-align: left; border: none; cursor: pointer; width: 100%;
   display: flex; align-items: center; gap: 14px; padding: 12px 14px;
-  background: var(--raised); box-shadow: var(--sh-raised); border-radius: var(--r-card); }
+  background: var(--raised); box-shadow: var(--sh-raised); border-radius: var(--r-card);
+  transition: transform .12s ease; }
+.row:active { transform: translateY(1px) scale(.98); }
 .rowAv { position: relative; flex: none; }
 .dot { position: absolute; top: 0; right: 0; width: 10px; height: 10px; border-radius: 999px;
   background: var(--ember-a); box-shadow: 0 0 0 2px var(--canvas); }

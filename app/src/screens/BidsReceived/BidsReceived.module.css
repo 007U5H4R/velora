@@ -56,6 +56,10 @@
 .sampleText { font-family: var(--font-ui); font-size: 14px; color: var(--gold); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .actions { display: flex; align-items: center; gap: 8px; flex: none; }
 .viewBtn { border: none; cursor: pointer; background: var(--well); box-shadow: var(--sh-raised); border-radius: var(--r-pill);
-  padding: 9px 18px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text-1); }
+  padding: 9px 18px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text-1);
+  transition: transform .12s ease; }
+.viewBtn:active { transform: translateY(1px) scale(.98); }
 .acceptBtn { border: none; cursor: pointer; background: var(--grad-ember); box-shadow: var(--sh-raised); border-radius: var(--r-pill);
-  padding: 10px 22px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--on-ember); white-space: nowrap; }
+  padding: 10px 22px; font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--on-ember); white-space: nowrap;
+  transition: transform .12s ease; }
+.acceptBtn:active { transform: translateY(1px) scale(.98); }

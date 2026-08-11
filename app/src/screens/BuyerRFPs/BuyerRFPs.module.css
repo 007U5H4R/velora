@@ -3,7 +3,9 @@
 .h1 { font-family: var(--font-display); font-weight: 600; font-size: 32px; color: var(--text-1); }
 .newBtn { display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer;
   font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--text-1);
-  padding: 9px 16px; border-radius: var(--r-pill); background: var(--raised); box-shadow: var(--sh-raised); }
+  padding: 9px 16px; border-radius: var(--r-pill); background: var(--raised); box-shadow: var(--sh-raised);
+  transition: transform .12s ease; }
+.newBtn:active { transform: translateY(1px) scale(.98); }
 .filter { padding: 4px 20px 8px; }
 
 .body { position: relative; flex: 1; overflow-y: auto; padding: 8px 20px 12px; min-height: 0; }
@@ -27,7 +29,9 @@
 .bidNew { font-family: var(--font-ui); font-size: 12px; font-weight: 600; color: var(--ember-a); }
 .finish { display: inline-flex; align-items: center; gap: 4px; flex: none; cursor: pointer; border: none;
   font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--text-1);
-  padding: 8px 13px; border-radius: var(--r-pill); background: var(--well); box-shadow: var(--sh-raised); }
+  padding: 8px 13px; border-radius: var(--r-pill); background: var(--well); box-shadow: var(--sh-raised);
+  transition: transform .12s ease; }
+.finish:active { transform: translateY(1px) scale(.98); }
 
 .stats { display: flex; gap: 12px; margin-top: 16px; position: relative; z-index: 1; }
 .stat { flex: 1; display: flex; flex-direction: column; gap: 3px; }
@@ -36,4 +40,6 @@
 
 .fab { position: absolute; right: 20px; bottom: 96px; z-index: 5; width: 60px; height: 60px; border-radius: 999px;
   border: none; cursor: pointer; display: grid; place-items: center; color: var(--on-ember, #fff);
-  background: var(--grad-ember); box-shadow: 0 10px 24px rgba(255,106,0,.34); }
+  background: var(--grad-ember); box-shadow: 0 10px 24px rgba(255,106,0,.34);
+  transition: transform .12s ease; }
+.fab:active { transform: translateY(1px) scale(.98); }

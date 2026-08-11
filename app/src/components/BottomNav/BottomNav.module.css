@@ -8,8 +8,9 @@
   flex: 1; border: none; background: transparent; cursor: pointer;
   display: inline-flex; flex-direction: column; align-items: center; gap: 5px;
   color: var(--text-2); font-family: var(--font-ui); font-weight: 500; font-size: 11px;
-  transition: color .15s ease;
+  transition: color .15s ease, transform .12s ease;
 }
+.tile:active { transform: translateY(1px); }
 .iconWrap { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 34px; border-radius: var(--r-tile); }
 .iconWrap > svg { width: 23px; height: 23px; }
 .active { color: var(--ember-a); }

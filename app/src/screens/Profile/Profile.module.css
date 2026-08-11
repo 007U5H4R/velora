@@ -40,8 +40,10 @@
 /* Settings list */
 .settingsList { background: var(--raised); box-shadow: var(--sh-raised); border-radius: var(--r-card); overflow: hidden; }
 .row { width: 100%; display: flex; align-items: center; gap: 12px; padding: 14px 16px;
-  border: none; border-bottom: 1px solid var(--well); background: transparent; cursor: pointer; text-align: left; }
+  border: none; border-bottom: 1px solid var(--well); background: transparent; cursor: pointer; text-align: left;
+  transition: transform .12s ease; }
 .row:last-child { border-bottom: none; }
+.row:active { transform: translateY(1px) scale(.98); }
 .rowIconWell { flex: none; width: 34px; height: 34px; border-radius: 999px; background: var(--well);
   display: grid; place-items: center; color: var(--text-2); }
 .rupee { font-family: var(--font-ui); font-weight: 700; font-size: 15px; }
@@ -52,4 +54,6 @@
 /* Sign out */
 .signOut { width: 100%; text-align: center; border: none; cursor: pointer;
   font-family: var(--font-ui); font-weight: 600; font-size: 15px; color: var(--ember-a);
-  background: var(--well); box-shadow: var(--sh-raised); border-radius: var(--r-pill); padding: 16px; }
+  background: var(--well); box-shadow: var(--sh-raised); border-radius: var(--r-pill); padding: 16px;
+  transition: transform .12s ease; }
+.signOut:active { transform: translateY(1px) scale(.98); }

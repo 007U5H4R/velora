@@ -3,7 +3,7 @@
   background: var(--canvas);
   display: flex; justify-content: center; align-items: flex-start;
 }
-.bezel { width: min(390px, 100vw); }
+.bezel { width: min(390px, 100%); }
 .screen {
   width: 100%;
   min-height: 100vh; min-height: 100dvh;
