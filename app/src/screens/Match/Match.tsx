@@ -11,7 +11,7 @@ import { Button } from '../../components/Button/Button';
 import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import type { Vendor } from '../../state/types';
 import styles from './Match.module.css';
-import handshakeMp4 from '../../assets/celebration/handshake.mp4';
+import handshakeGif from '../../assets/celebration/handshake.gif';
 import handshakeStill from '../../assets/celebration/handshake_still.png';
 import confetti from '../../assets/celebration/confetti.gif';
 import flowerRain from '../../assets/celebration/flower-rain.gif';
@@ -65,8 +65,8 @@ export function Match({ vendor, onClose }: { vendor: Vendor; onClose: () => void
         <motion.div className={styles.handshake}
           {...enter({ opacity: 0, scale: 0.8 }, { delay: 0.5, duration: 0.45, ease })}
           animate={{ opacity: 1, scale: 1 }}>
-          <video className={styles.video} src={handshakeMp4} poster={handshakeStill}
-            autoPlay={!reduced} muted playsInline loop />
+          {/* Figma's mehendi handshake — transparent GIF (88 frames); reduced-motion holds a transparent still */}
+          <img className={styles.video} src={reduced ? handshakeStill : handshakeGif} alt="" aria-hidden />
         </motion.div>
 
         <motion.div className={styles.pills}
