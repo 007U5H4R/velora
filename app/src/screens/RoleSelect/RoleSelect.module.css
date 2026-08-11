@@ -12,8 +12,7 @@
 .mandala {
   position: absolute; top: -6px; right: -22px;
   width: 120px; height: 120px;          /* square source (260×260) → uniform, no skew */
-  opacity: .85;
-  mix-blend-mode: screen;               /* drop the motif's dark bg, keep only the gold */
+  opacity: .9;                           /* transparent-bg PNG → shows as clean gold on the canvas */
   z-index: 0; pointer-events: none; user-select: none;
 }
 
