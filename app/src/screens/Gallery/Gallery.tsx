@@ -1,4 +1,5 @@
 import { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { PhoneFrame } from '../../components/PhoneFrame/PhoneFrame';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { Button, PillowButton } from '../../components/Button/Button';
@@ -154,6 +155,11 @@ export function Gallery() {
         <GallerySection title="Swipe deck (drag me / use buttons)"><DeckDemo /></GallerySection>
         <GallerySection title="Match celebration"><MatchDemo /></GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
+        <GallerySection title="Screen 03 — Trust Profile">
+          <Link to="/vendor/v-loomcraft" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            Open Loomcraft Trust Profile →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
