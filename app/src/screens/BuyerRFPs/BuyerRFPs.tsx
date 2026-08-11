@@ -5,8 +5,7 @@ import { PhoneFrame } from '../../components/PhoneFrame/PhoneFrame';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import { SegmentedControl } from '../../components/SegmentedControl/SegmentedControl';
-import { BottomNav } from '../../components/BottomNav/BottomNav';
-import { brandNav } from '../../components/BottomNav/navItems';
+import { AppBottomNav } from '../../components/BottomNav/AppBottomNav';
 import { GarmentIcon, type GarmentName } from '../../components/icons/GarmentIcon';
 import { useStore } from '../../state/store';
 import type { Rfp } from '../../state/types';
@@ -105,7 +104,7 @@ export function BuyerRFPs() {
         </div>
 
         <button className={styles.fab} onClick={() => nav('/create-rfp')} aria-label="Create RFP"><Plus size={26} /></button>
-        <BottomNav items={brandNav} activeId="rfps" badges={{ matches: 6 }} onNavigate={() => {}} />
+        <AppBottomNav activeId="rfps" badges={{ matches: 6 }} />
       </div>
     </PhoneFrame>
   );

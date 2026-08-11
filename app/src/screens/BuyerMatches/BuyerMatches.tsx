@@ -6,8 +6,7 @@ import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { Avatar } from '../../components/Avatar/Avatar';
 import { avatarUrl } from '../../assets/avatars';
 import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
-import { BottomNav } from '../../components/BottomNav/BottomNav';
-import { brandNav } from '../../components/BottomNav/navItems';
+import { AppBottomNav } from '../../components/BottomNav/AppBottomNav';
 import { useStore } from '../../state/store';
 import { vendors } from '../../data/vendors';
 import type { Match } from '../../state/types';
@@ -102,7 +101,7 @@ export function BuyerMatches() {
           </div>
         </div>
 
-        <BottomNav items={brandNav} activeId="matches" badges={{ matches: 6 }} onNavigate={() => {}} />
+        <AppBottomNav activeId="matches" badges={{ matches: 6 }} />
       </div>
     </PhoneFrame>
   );

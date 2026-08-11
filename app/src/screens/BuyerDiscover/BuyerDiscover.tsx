@@ -11,8 +11,7 @@ import { SwipeDeck, Pagination, type SwipeDeckHandle } from '../../motion/SwipeD
 import { TrustCard } from '../../components/TrustCard/TrustCard';
 import { Chip } from '../../components/Chip/Chip';
 import { PillowButton } from '../../components/Button/Button';
-import { BottomNav } from '../../components/BottomNav/BottomNav';
-import { brandNav } from '../../components/BottomNav/navItems';
+import { AppBottomNav } from '../../components/BottomNav/AppBottomNav';
 import { MatchOverlay } from '../Match/Match';
 import { useStore } from '../../state/store';
 import { noor } from '../../data/brands';
@@ -81,8 +80,7 @@ export function BuyerDiscover() {
           </div>
         </div>
 
-        <BottomNav items={brandNav} activeId="discover" badges={{ matches: 6 }}
-          onNavigate={() => { /* other tabs wired in Phase 3/5 */ }} />
+        <AppBottomNav activeId="discover" badges={{ matches: 6 }} />
       </div>
 
       <MatchOverlay />

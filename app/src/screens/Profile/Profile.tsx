@@ -5,8 +5,7 @@ import { PhoneFrame } from '../../components/PhoneFrame/PhoneFrame';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import { SegmentedControl } from '../../components/SegmentedControl/SegmentedControl';
-import { BottomNav } from '../../components/BottomNav/BottomNav';
-import { brandNav, manufacturerNav } from '../../components/BottomNav/navItems';
+import { AppBottomNav } from '../../components/BottomNav/AppBottomNav';
 import { Avatar } from '../../components/Avatar/Avatar';
 import { avatarUrl } from '../../assets/avatars';
 import { Gauge } from '../../components/Gauge/Gauge';
@@ -29,7 +28,6 @@ export function Profile() {
   const persona = role === 'brand'
     ? { name: noor.name,      sub: `D2C founder · ${noor.location}`,                     avatar: noor.avatar,      score: noor.trustScore }
     : { name: loomcraft.name, sub: `Manufacturer · ${loomcraft.location.split(',')[0]}`, avatar: loomcraft.avatar, score: loomcraft.trustScore };
-  const navItems = role === 'brand' ? brandNav : manufacturerNav;
 
   const settingsRows: SettingsRow[] = [
     { id: 'trust', icon: <ShieldCheck size={15} />, label: 'Trust & verification', gauge: true },
@@ -104,7 +102,7 @@ export function Profile() {
           </div>
         </div>
 
-        <BottomNav items={navItems} activeId="profile" badges={{ matches: 6 }} onNavigate={() => {}} />
+        <AppBottomNav activeId="profile" badges={{ matches: 6 }} />
       </div>
     </PhoneFrame>
   );

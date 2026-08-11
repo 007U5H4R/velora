@@ -10,8 +10,7 @@ import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
 import { SwipeDeck, Pagination, type SwipeDeckHandle } from '../../motion/SwipeDeck';
 import { RfpDeckCard } from '../../components/RfpDeckCard/RfpDeckCard';
 import { PillowButton } from '../../components/Button/Button';
-import { BottomNav } from '../../components/BottomNav/BottomNav';
-import { manufacturerNav } from '../../components/BottomNav/navItems';
+import { AppBottomNav } from '../../components/BottomNav/AppBottomNav';
 import { useStore } from '../../state/store';
 import styles from './VendorDiscover.module.css';
 
@@ -77,8 +76,7 @@ export function VendorDiscover() {
           </div>
         </div>
 
-        <BottomNav items={manufacturerNav} activeId="discover" badges={{ matches: 6 }}
-          onNavigate={() => { /* other tabs wired in later phases */ }} />
+        <AppBottomNav activeId="discover" badges={{ matches: 6 }} />
       </div>
     </PhoneFrame>
   );
