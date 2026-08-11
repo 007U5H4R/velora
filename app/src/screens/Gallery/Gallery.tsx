@@ -165,6 +165,11 @@ export function Gallery() {
             Open Buyer Discover (swipe deck) →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 05 — Buyer Matches">
+          <Link to="/matches" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            Open Buyer Matches →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
