@@ -1,0 +1,4 @@
+.track { width: 52px; height: 32px; border: none; border-radius: var(--r-pill); background: var(--well); box-shadow: var(--sh-sunken); cursor: pointer; padding: 3px; display: flex; align-items: center; transition: background .18s ease; }
+.on { background: var(--grad-ember); box-shadow: none; }
+.thumb { width: 26px; height: 26px; border-radius: var(--r-pill); background: #F2F3F5; box-shadow: 2px 2px 5px rgba(0,0,0,.4); transition: transform .18s ease; }
+.on .thumb { transform: translateX(20px); }

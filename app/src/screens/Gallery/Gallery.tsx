@@ -8,9 +8,12 @@ import { Avatar } from '../../components/Avatar/Avatar';
 import { avatarUrl } from '../../assets/avatars';
 import { CertBadge } from '../../components/CertBadge/CertBadge';
 import { MandalaBg } from '../../components/MandalaBg/MandalaBg';
+import { Stat, StatGroup } from '../../components/Stat/Stat';
+import { Stepper } from '../../components/Stepper/Stepper';
+import { Toggle } from '../../components/Toggle/Toggle';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
-import { X, Eye, Star, Check, Sparkles } from 'lucide-react';
+import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
 
 export function GallerySection({ title, children }: { title: string; children: ReactNode }) {
   return (
@@ -18,6 +21,22 @@ export function GallerySection({ title, children }: { title: string; children: R
       <h2 className={styles.h2}>{title}</h2>
       <div className={styles.demo}>{children}</div>
     </section>
+  );
+}
+
+function ControlsDemo() {
+  const [units, setUnits] = useState(500);
+  const [on, setOn] = useState(true);
+  return (
+    <>
+      <StatGroup>
+        <Stat icon={<Check />} label="On-time" value="97%" />
+        <Stat icon={<Package />} label="MOQ" value={300} />
+        <Stat icon={<Clock />} label="Lead time" value={42} unit="days" />
+      </StatGroup>
+      <Stepper value={units} onChange={setUnits} step={50} min={0} />
+      <Toggle checked={on} onChange={setOn} ariaLabel="demo toggle" />
+    </>
   );
 }
 
@@ -77,6 +96,7 @@ export function Gallery() {
             <MandalaBg style={{ opacity: .28 }} />
           </div>
         </GallerySection>
+        <GallerySection title="Stat · Stepper · Toggle"><ControlsDemo /></GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>
     </PhoneFrame>
