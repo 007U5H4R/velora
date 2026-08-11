@@ -1,0 +1,19 @@
+/* Velora neumorphic shadow recipes A–D — canonical source: /design-system.md §3. Always a pair (never a single shadow alone). */
+:root {
+  /* A · raised flat surface (cards, dock tiles) */
+  --sh-raised: -6px -6px 14px rgba(255, 255, 255, .05), 8px 8px 16px rgba(0, 0, 0, .65);
+  /* C · sunken/deboss (active wells, insets) */
+  --sh-sunken: inset 5px 5px 10px rgba(0, 0, 0, .6), inset -5px -5px 10px rgba(255, 255, 255, .06);
+}
+
+/* B · raised + colored glow (CTAs/action buttons): glow = element's OWN dark gradient stop @55%.
+   Consumers set --glow, e.g. --glow:rgba(232,66,10,.55) for ember. Default below is the ember glow. */
+.sh-cta {
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, .15), 6px 6px 18px var(--glow, rgba(232, 66, 10, .55));
+}
+
+/* D · raised + ambient accent glow (hero circular feature, e.g. vendor photo):
+   consumers set --ambient, e.g. --ambient:rgba(227,172,73,.35) for gold. Default below is the gold ambient glow. */
+.sh-hero {
+  box-shadow: -4px -4px 10px rgba(255, 255, 255, .12), 6px 6px 18px rgba(0, 0, 0, .55), 0 0 16px var(--ambient, rgba(227, 172, 73, .35));
+}

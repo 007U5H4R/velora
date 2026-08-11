@@ -14,8 +14,8 @@
 
 | Task | Model | Status | Report | Notes |
 |---|---|---|---|---|
-| 1.1 Scaffold app + dev server | Sonnet | ⏳ running (bg) | | git+branch already done by orchestrator; subagent does vite scaffold + deps + vitest |
-| 1.2 Token + style layer | Sonnet | ☐ pending | | from design-system.md §1–§4,§6 |
+| 1.1 Scaffold app + dev server | Sonnet | ✅ done `1a2c6f0` | task-1.1-report.md | build+test green; React **19** accepted (see decision) |
+| 1.2 Token + style layer | Sonnet | ⏳ running (bg) | | from design-system.md §1–§4,§6 |
 | 1.3 Types + store (TDD) | Sonnet | ☐ pending | | 5 store tests must pass |
 | 1.4 Seeded mock data | Sonnet | ☐ pending | | values from Figma screenshots (provided in brief) |
 | 1.5 PhoneFrame + StatusBar + Gallery | Sonnet | ☐ pending | | |
@@ -30,6 +30,8 @@
 ## Decisions / open threads
 - 2026-08-11: repo `git init`ed at Velora/; baseline commit (81 files); branch `build/mvp`.
 - Reviews run by orchestrator (not separate reviewer subagents) to save Pro-tier budget; final whole-branch review still on Opus.
+- 2026-08-11: **React 19.2.8 accepted** (Vite react-ts template default; all deps React-19-compatible, build+test green). Supersedes the plan/spec "React 18" line. Installed stack: Vite 8, TS 6, RR 7, framer-motion 13, zustand 5, Vitest 4, RTL 16.
+- Cleanup owed: Task 1.2 also deletes leftover Vite demo cruft (`App.css`, `assets/react.svg`, `assets/vite.svg`, `assets/hero.png`, `public/icons.svg`) and repoints `index.css`→global styles.
 
 ## Later phases (expand at session start)
 - P2 Buyer core (Gauge, TrustCard, SwipeDeck, screens 02/03/04) · P3 Buyer lists (05/06/06b) · P4 Manufacturer (07/08/09 + loop) · P5 Shared+nav (10/11, role switch, transitions) · P6 Polish+responsive+final review.

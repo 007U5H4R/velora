@@ -1,0 +1,49 @@
+/* Velora design tokens — canonical source: /design-system.md (§1 colors, §2 type, §4 radii, §6 gradients) */
+:root {
+  /* surfaces */
+  --canvas: #1C1D22;
+  --raised: #26272C;
+  --well: #1F2025;
+
+  /* text */
+  --text-1: #E8E9ED;
+  --text-2: #8A8C94;
+  --text-3: #B9BBC3;
+  --on-ember: #FFF7F2;
+
+  /* ember (primary) */
+  --ember-a: #FF6A00;
+  --ember-b: #E8420A;
+
+  /* accents */
+  --gold: #E3AC49;
+  --sage: #8FAF6A;
+
+  /* status gradient stops */
+  --red-a: #FF8A80;
+  --red-b: #C62828;
+  --blue-a: #82C4FF;
+  --blue-b: #0D47A1;
+  --amber-a: #FFE082;
+  --amber-b: #FF8F00;
+  --mint-a: #8FF5DC;
+  --mint-b: #0A8F72;
+
+  /* radii */
+  --r-card: 28px;
+  --r-pill: 999px;
+  --r-tile: 20px;
+  --r-well: 16px;
+
+  /* fonts */
+  --font-display: 'Fraunces Variable', 'Fraunces', Georgia, serif;
+  --font-ui: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* gradients — diagonal for circular/pill (design-system §6), vertical for segmented bars */
+  --grad-ember: linear-gradient(135deg, var(--ember-a), var(--ember-b));
+  --grad-ember-vert: linear-gradient(180deg, var(--ember-a), var(--ember-b));
+  --grad-red: linear-gradient(135deg, var(--red-a), var(--red-b));
+  --grad-blue: linear-gradient(135deg, var(--blue-a), var(--blue-b));
+  --grad-amber: linear-gradient(135deg, var(--amber-a), var(--amber-b));
+  --grad-mint: linear-gradient(135deg, var(--mint-a), var(--mint-b));
+}
