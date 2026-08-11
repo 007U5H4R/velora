@@ -1,0 +1,24 @@
+.screen { display: flex; flex-direction: column; height: 100%; min-height: 100%; }
+
+.topbar { display: flex; align-items: center; gap: 10px; padding: 6px 18px 10px; }
+.brand { display: flex; align-items: center; gap: 9px; }
+.orb { width: 15px; height: 15px; border-radius: 999px; background: var(--grad-ember); box-shadow: 0 0 10px color-mix(in srgb, var(--ember-a) 55%, transparent); flex: none; }
+.word { font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--text-1); letter-spacing: .01em; }
+.topbar > :global(.seg), .topbar :global([class*="segmented"]) { flex: 1; } /* let the control take the middle; if it already sizes itself, harmless */
+
+.body { position: relative; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 8px 20px 6px; min-height: 0; }
+.mandala { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 340px; height: 266px; z-index: 0; pointer-events: none; opacity: .9; }
+
+.deckWrap { position: relative; z-index: 1; width: 100%; max-width: 340px; height: 300px; margin: 6px auto 0; }
+/* dots + chip stack under the deck */
+.body :global(.dots), .body > :global(*) { z-index: 1; }
+
+.empty { position: relative; z-index: 1; margin: auto; text-align: center; }
+.emptyTitle { font-family: var(--font-display); font-weight: 600; font-size: 22px; color: var(--text-1); }
+.emptySub { font-family: var(--font-ui); font-size: 13.5px; color: var(--text-2); margin-top: 6px; }
+
+.actions { display: flex; align-items: flex-end; justify-content: center; gap: 16px; padding: 6px 16px 12px; }
+.primaryPillow { transform: scale(1.18); transform-origin: bottom center; }
+
+/* Chip spacing under the dots */
+.body :global(.chip), .body :global([class*="chip"]) { margin-top: 14px; }

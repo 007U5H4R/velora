@@ -160,6 +160,11 @@ export function Gallery() {
             Open Loomcraft Trust Profile →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 02 — Buyer Discover">
+          <Link to="/discover" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            Open Buyer Discover (swipe deck) →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
