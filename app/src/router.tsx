@@ -5,6 +5,7 @@ import { BuyerDiscover } from './screens/BuyerDiscover/BuyerDiscover';
 import { BuyerMatches } from './screens/BuyerMatches/BuyerMatches';
 import { CreateRFP } from './screens/CreateRFP/CreateRFP';
 import { BuyerRFPs } from './screens/BuyerRFPs/BuyerRFPs';
+import { VendorDiscover } from './screens/VendorDiscover/VendorDiscover';
 
 export const router = createBrowserRouter([
   { path: '/', element: <Gallery /> },
@@ -14,4 +15,5 @@ export const router = createBrowserRouter([
   { path: '/matches', element: <BuyerMatches /> },
   { path: '/create-rfp', element: <CreateRFP /> },
   { path: '/rfps', element: <BuyerRFPs /> },
+  { path: '/vendor-discover', element: <VendorDiscover /> },
 ]);

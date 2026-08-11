@@ -180,6 +180,11 @@ export function Gallery() {
             Open Buyer RFPs →
           </Link>
         </GallerySection>
+        <GallerySection title="Screen 07 — Vendor Discover">
+          <Link to="/vendor-discover" style={{ color: 'var(--gold)', fontFamily: 'var(--font-ui)', fontWeight: 600 }}>
+            07 Vendor Discover →
+          </Link>
+        </GallerySection>
       </main>
       <MatchOverlay />
     </PhoneFrame>
