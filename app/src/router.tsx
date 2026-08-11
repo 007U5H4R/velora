@@ -10,20 +10,26 @@ import { SubmitBid } from './screens/SubmitBid/SubmitBid';
 import { BidsReceived } from './screens/BidsReceived/BidsReceived';
 import { Chat } from './screens/Chat/Chat';
 import { Profile } from './screens/Profile/Profile';
+import { RootLayout } from './motion/RootLayout';
 
 export const router = createBrowserRouter([
-  { path: '/', element: <Gallery /> },
-  { path: '/gallery', element: <Gallery /> },
-  { path: '/vendor/:id', element: <TrustProfile /> },
-  { path: '/discover', element: <DiscoverRoute /> },
-  { path: '/matches', element: <BuyerMatches /> },
-  { path: '/create-rfp', element: <CreateRFP /> },
-  { path: '/rfps', element: <BuyerRFPs /> },
-  { path: '/vendor-discover', element: <VendorDiscover /> },
-  { path: '/submit-bid/:rfpId', element: <SubmitBid /> },
-  { path: '/bids', element: <BidsReceived /> },
-  { path: '/bids/:rfpId', element: <BidsReceived /> },
-  { path: '/chat', element: <Chat /> },
-  { path: '/chat/:vendorId', element: <Chat /> },
-  { path: '/profile', element: <Profile /> },
+  {
+    element: <RootLayout />,
+    children: [
+      { path: '/', element: <Gallery /> },
+      { path: '/gallery', element: <Gallery /> },
+      { path: '/vendor/:id', element: <TrustProfile /> },
+      { path: '/discover', element: <DiscoverRoute /> },
+      { path: '/matches', element: <BuyerMatches /> },
+      { path: '/create-rfp', element: <CreateRFP /> },
+      { path: '/rfps', element: <BuyerRFPs /> },
+      { path: '/vendor-discover', element: <VendorDiscover /> },
+      { path: '/submit-bid/:rfpId', element: <SubmitBid /> },
+      { path: '/bids', element: <BidsReceived /> },
+      { path: '/bids/:rfpId', element: <BidsReceived /> },
+      { path: '/chat', element: <Chat /> },
+      { path: '/chat/:vendorId', element: <Chat /> },
+      { path: '/profile', element: <Profile /> },
+    ],
+  },
 ]);
