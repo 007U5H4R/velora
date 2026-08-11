@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { PhoneFrame } from '../../components/PhoneFrame/PhoneFrame';
 import { StatusBar } from '../../components/StatusBar/StatusBar';
 import { Button, PillowButton } from '../../components/Button/Button';
@@ -15,7 +15,8 @@ import { BottomNav } from '../../components/BottomNav/BottomNav';
 import { brandNav } from '../../components/BottomNav/navItems';
 import { Gauge } from '../../components/Gauge/Gauge';
 import { TrustCard } from '../../components/TrustCard/TrustCard';
-import { loomcraft, indigo } from '../../data/vendors';
+import { SwipeDeck, Pagination, type SwipeDeckHandle } from '../../motion/SwipeDeck';
+import { loomcraft, indigo, vendorDeck } from '../../data/vendors';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
@@ -63,6 +64,26 @@ function NavDemo() {
   return (
     <div style={{ width: '100%', border: '1px solid rgba(255,255,255,.06)', borderRadius: 16, overflow: 'hidden' }}>
       <BottomNav items={brandNav} activeId={active} badges={{ matches: 6 }} onNavigate={(id) => setActive(id)} />
+    </div>
+  );
+}
+
+function DeckDemo() {
+  const [i, setI] = useState(0);
+  const deck = useRef<SwipeDeckHandle>(null);
+  const advance = () => setI((n) => Math.min(n + 1, vendorDeck.length));
+  return (
+    <div style={{ width: '100%' }}>
+      <div style={{ height: 320, marginBottom: 16 }}>
+        <SwipeDeck items={vendorDeck} index={i} keyOf={(v) => v.id}
+          renderCard={(v) => <TrustCard vendor={v} animateGauge={false} />}
+          onSwipe={advance} ref={deck} />
+      </div>
+      <Pagination count={vendorDeck.length} active={i} />
+      <div style={{ display: 'flex', gap: 18, justifyContent: 'center', marginTop: 16 }}>
+        <PillowButton color="red" icon={<X />} label="Pass" onClick={() => deck.current?.swipe('pass')} />
+        <PillowButton color="mint" icon={<Check />} label="Shortlist" onClick={() => deck.current?.swipe('like')} />
+      </div>
     </div>
   );
 }
@@ -123,6 +144,7 @@ export function Gallery() {
           <TrustCard vendor={loomcraft} />
           <TrustCard vendor={indigo} />
         </GallerySection>
+        <GallerySection title="Swipe deck (drag me / use buttons)"><DeckDemo /></GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>
     </PhoneFrame>

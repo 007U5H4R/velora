@@ -1,0 +1,20 @@
+.deck { position: relative; width: 100%; min-height: 300px; }
+.top, .peek { position: absolute; inset: 0; width: 100%; }
+.top { z-index: 20; cursor: grab; touch-action: pan-y; will-change: transform; }
+.peek { transform-origin: top center; pointer-events: none; }
+
+/* LIKE / PASS stamps — decorative, driven by drag distance (opacity via framer). */
+.hint {
+  position: absolute; top: 18px; z-index: 30;
+  padding: 5px 14px; border-radius: var(--r-pill);
+  font-family: var(--font-ui); font-weight: 800; font-size: 13px;
+  letter-spacing: .1em; text-transform: uppercase;
+  border: 2px solid currentColor; background: rgba(0, 0, 0, .28);
+  pointer-events: none;
+}
+.like { right: 18px; color: var(--mint-a); transform: rotate(9deg); }
+.pass { left: 18px; color: var(--red-a); transform: rotate(-9deg); }
+
+.dots { display: flex; gap: 7px; justify-content: center; align-items: center; }
+.dot { width: 7px; height: 7px; border-radius: 999px; background: rgba(255, 255, 255, .22); transition: all .25s ease; }
+.dotOn { width: 22px; background: var(--ember-a); }
