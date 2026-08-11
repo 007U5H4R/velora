@@ -1,6 +1,7 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import type { TargetAndTransition, Transition } from 'framer-motion';
 import { Shirt } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useStore } from '../../state/store';
 import { noor } from '../../data/brands';
 import { rfpTees } from '../../data/rfps';
@@ -23,6 +24,7 @@ export function Match({ vendor, onClose }: { vendor: Vendor; onClose: () => void
   // spring) into a plain quick fade, drop the decorative confetti/flower motion, and
   // hold the handshake on its poster still instead of autoplaying.
   const reduced = useReducedMotion();
+  const nav = useNavigate();
   const enter = (initial: TargetAndTransition, transition: Transition) =>
     reduced
       ? { initial: { opacity: 0 } as TargetAndTransition, transition: { duration: 0.2 } as Transition }
@@ -97,9 +99,8 @@ export function Match({ vendor, onClose }: { vendor: Vendor; onClose: () => void
         <motion.div className={styles.ctas}
           {...enter({ opacity: 0, y: 16 }, { delay: 0.82, duration: 0.4, ease })}
           animate={{ opacity: 1, y: 0 }}>
-          {/* Phase 2 placeholder: both dismiss. Phase 4/5 wire Submit Bid → /submit-bid, message → /chat. */}
-          <Button variant="ember" block onClick={onClose}>Submit Bid</Button>
-          <Button variant="secondary" block className={styles.msgBtn} onClick={onClose}>Send a message first</Button>
+          <Button variant="ember" block onClick={() => { onClose(); nav('/submit-bid/rfp-tees'); }}>Submit Bid</Button>
+          <Button variant="secondary" block className={styles.msgBtn} onClick={() => { onClose(); nav('/chat/' + vendor.id); }}>Send a message first</Button>
         </motion.div>
       </motion.div>
     </motion.div>

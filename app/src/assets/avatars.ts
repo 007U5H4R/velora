@@ -16,8 +16,8 @@ import kalaImg from './avatars/kala.png';
 import rheaImg from './avatars/rhea.png';
 
 // Kalighat pat-chitra avatars: Noor (buyer portrait) + one distinct folk-art
-// creature per deck vendor. Inbound-likes + authored brands fall back to the
-// generic Kalighat art until Phases 3–4 give them their own.
+// creature per deck vendor, plus the three authored brands. Any remaining
+// unmapped id falls back to the generic Kalighat art.
 const map: Record<string, string> = {
   loomcraft: loomcraftImg,
   noor: noorImg,
@@ -34,6 +34,9 @@ const map: Record<string, string> = {
   mira: miraImg,
   kala: kalaImg,
   rhea: rheaImg,
+  saffron: angaImg,
+  terra: miraImg,
+  halcyon: rheaImg,
 };
 
 export function avatarUrl(slug?: string): string {

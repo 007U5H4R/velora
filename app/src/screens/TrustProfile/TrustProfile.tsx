@@ -83,7 +83,7 @@ export function TrustProfile() {
       </div>
 
       <div className={styles.ctaBar}>
-        <button className={styles.msg} onClick={() => { /* Phase 5 → /chat */ }}>
+        <button className={styles.msg} onClick={() => nav('/chat/' + vendor.id)}>
           <MessageCircle size={18} /> Message
         </button>
         <Button variant="ember" block onClick={() => openMatch(vendor)}>Shortlist</Button>

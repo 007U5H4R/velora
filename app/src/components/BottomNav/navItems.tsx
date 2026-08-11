@@ -8,13 +8,13 @@ export const brandNav: NavItem[] = [
   { id: 'discover', label: 'Discover', icon: <Compass />,    to: '/discover' },
   { id: 'matches',  label: 'Matches',  icon: <Heart />,      to: '/matches' },
   { id: 'rfps',     label: 'RFPs',     icon: <FileText />,   to: '/rfps' },
-  { id: 'trust',    label: 'Trust',    icon: <ShieldCheck />,to: '/trust' },
+  { id: 'trust',    label: 'Trust',    icon: <ShieldCheck />,to: '/vendor/v-loomcraft' },
   { id: 'profile',  label: 'Profile',  icon: <User />,       to: '/profile' },
 ];
 export const manufacturerNav: NavItem[] = [
   { id: 'discover', label: 'Discover', icon: <Compass />,    to: '/discover' },
   { id: 'matches',  label: 'Matches',  icon: <Heart />,      to: '/matches' },
   { id: 'bids',     label: 'Bids',     icon: <FileText />,   to: '/bids' },
-  { id: 'trust',    label: 'Trust',    icon: <ShieldCheck />,to: '/trust' },
+  { id: 'trust',    label: 'Trust',    icon: <ShieldCheck />,to: '/vendor/v-loomcraft' },
   { id: 'profile',  label: 'Profile',  icon: <User />,       to: '/profile' },
 ];
