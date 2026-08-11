@@ -13,7 +13,7 @@ export const bids: Bid[] = [
   },
   {
     id: 'bid-saanjh', rfpId: 'rfp-tees', vendorId: 'v-saanjh', pricePerUnit: 235, moq: 500,
-    leadDays: 35, sample: 'paid', total: 117500, status: 'sent', note: '',
+    leadDays: 35, sample: 'free', total: 117500, status: 'sent', note: '',
   },
   // (authored 4th — frame shows "4 bids")
   {
