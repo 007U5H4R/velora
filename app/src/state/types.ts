@@ -44,6 +44,7 @@ export interface AppState {
   activeMatch: Vendor | null;
   chat: Record<string, ChatThread>;
   switchRole(): void;
+  setRole(role: Role): void;
   swipeVendor(dir: SwipeDir): void;
   swipeRfp(dir: SwipeDir): void;
   createRfp(input: Omit<Rfp, 'id' | 'brandId' | 'status' | 'bidIds'>): string;

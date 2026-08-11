@@ -14,6 +14,7 @@ export function createStore(initial: Partial<AppState> = {}) {
     chat: {},
 
     switchRole: () => set((s) => ({ role: s.role === 'brand' ? 'manufacturer' : 'brand' })),
+    setRole: (role) => set(() => ({ role })),
 
     swipeVendor: (dir: SwipeDir) => {
       const cur = get().vendorDeck[get().vendorIndex];

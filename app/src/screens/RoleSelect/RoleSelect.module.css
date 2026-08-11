@@ -1,0 +1,76 @@
+.screen {
+  position: relative;
+  display: flex; flex-direction: column;
+  height: 100%; min-height: 100%;
+}
+
+/* StatusBar wrapper needs its own stacking context so it paints above the
+   z-index:0 mandala (positioned siblings with z-index:0 would otherwise
+   paint over static in-flow content — see .content below for the same fix). */
+.topBar { position: relative; z-index: 1; flex: none; }
+
+.mandala {
+  position: absolute; top: 0; right: -18px;
+  width: 100px; height: 100px;
+  opacity: .6;
+  z-index: 0; pointer-events: none; user-select: none;
+}
+
+.content {
+  position: relative; z-index: 1;
+  flex: 1; min-height: 0;
+  display: flex; flex-direction: column;
+  padding: 8px 24px 28px;
+  overflow-y: auto;
+}
+
+.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 18px; }
+.wordmark { font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--text-1); line-height: 1; }
+.hairline { display: block; width: 64px; height: 1px; background: var(--gold); border-radius: var(--r-pill); }
+
+.headline {
+  font-family: var(--font-display); font-weight: 600; font-size: 30px; line-height: 1.12;
+  color: var(--text-1); margin-top: 30px;
+}
+.subhead {
+  font-family: var(--font-ui); font-size: 15px; line-height: 1.4; color: var(--text-3);
+  margin-top: 12px;
+}
+
+.cards { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
+.card {
+  width: 100%; border: none; cursor: pointer; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  background: var(--raised); box-shadow: var(--sh-raised); border-radius: var(--r-card);
+  padding: 22px 20px 24px;
+  font-family: inherit; color: inherit;
+  transition: transform .12s ease;
+}
+.card:active { transform: translateY(1px) scale(.98); }
+
+/* Illustration + ember glow: radial fade reusing the same ember rgb already
+   established as the app's glow color (Button.module.css / shadows.css --glow). */
+.illoWrap {
+  position: relative;
+  width: 160px; height: 160px;
+  display: grid; place-items: center;
+}
+.illoWrap::before {
+  content: '';
+  position: absolute; inset: 4px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 106, 0, .4), rgba(232, 66, 10, .12) 55%, rgba(232, 66, 10, 0) 72%);
+  z-index: 0;
+  pointer-events: none;
+}
+.illo { position: relative; z-index: 1; width: 160px; height: 160px; object-fit: contain; display: block; }
+
+.cardTitle { font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--text-1); }
+.cardSubtitle { font-family: var(--font-ui); font-size: 13px; line-height: 1.35; color: var(--text-3); }
+
+.footer {
+  margin-top: auto; padding-top: 24px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.dot { flex: none; width: 10px; height: 10px; border-radius: 50%; background: var(--sage); }
+.footerText { font-family: var(--font-ui); font-size: 13px; color: var(--text-3); }

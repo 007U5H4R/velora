@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { RoleSelect } from './screens/RoleSelect/RoleSelect';
 import { Gallery } from './screens/Gallery/Gallery';
 import { TrustProfile } from './screens/TrustProfile/TrustProfile';
 import { DiscoverRoute } from './screens/DiscoverRoute';
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
-      { path: '/', element: <Gallery /> },
+      { path: '/', element: <RoleSelect /> },
       { path: '/gallery', element: <Gallery /> },
       { path: '/vendor/:id', element: <TrustProfile /> },
       { path: '/discover', element: <DiscoverRoute /> },

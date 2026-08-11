@@ -45,6 +45,13 @@ describe('store loop', () => {
     s.getState().switchRole();
     expect(s.getState().role).toBe('manufacturer');
   });
+  test('setRole sets the role directly', () => {
+    const s = createStore();
+    s.getState().setRole('manufacturer');
+    expect(s.getState().role).toBe('manufacturer');
+    s.getState().setRole('brand');
+    expect(s.getState().role).toBe('brand');
+  });
 });
 
 test('appStore is seeded from mock data', () => {
