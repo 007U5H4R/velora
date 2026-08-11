@@ -17,6 +17,8 @@ import { Gauge } from '../../components/Gauge/Gauge';
 import { TrustCard } from '../../components/TrustCard/TrustCard';
 import { SwipeDeck, Pagination, type SwipeDeckHandle } from '../../motion/SwipeDeck';
 import { loomcraft, indigo, vendorDeck } from '../../data/vendors';
+import { MatchOverlay } from '../Match/Match';
+import { useStore } from '../../state/store';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
@@ -88,6 +90,11 @@ function DeckDemo() {
   );
 }
 
+function MatchDemo() {
+  const openMatch = useStore((s) => s.openMatch);
+  return <Button variant="ember" onClick={() => openMatch(loomcraft)}>Preview the Match celebration</Button>;
+}
+
 export function Gallery() {
   return (
     <PhoneFrame>
@@ -145,8 +152,10 @@ export function Gallery() {
           <TrustCard vendor={indigo} />
         </GallerySection>
         <GallerySection title="Swipe deck (drag me / use buttons)"><DeckDemo /></GallerySection>
+        <GallerySection title="Match celebration"><MatchDemo /></GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>
+      <MatchOverlay />
     </PhoneFrame>
   );
 }
