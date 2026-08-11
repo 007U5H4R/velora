@@ -14,6 +14,8 @@ import { Toggle } from '../../components/Toggle/Toggle';
 import { BottomNav } from '../../components/BottomNav/BottomNav';
 import { brandNav } from '../../components/BottomNav/navItems';
 import { Gauge } from '../../components/Gauge/Gauge';
+import { TrustCard } from '../../components/TrustCard/TrustCard';
+import { loomcraft, indigo } from '../../data/vendors';
 import styles from './Gallery.module.css';
 import type { ReactNode } from 'react';
 import { X, Eye, Star, Check, Sparkles, Package, Clock } from 'lucide-react';
@@ -116,6 +118,10 @@ export function Gallery() {
             <Gauge score={88} variant="mini" size={56} />
             <Gauge score={83} variant="mini" size={56} />
           </div>
+        </GallerySection>
+        <GallerySection title="Trust card (vendor)">
+          <TrustCard vendor={loomcraft} />
+          <TrustCard vendor={indigo} />
         </GallerySection>
         {/* Component demo sections are appended here by tasks 1.6–1.10 */}
       </main>

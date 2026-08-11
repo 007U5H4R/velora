@@ -1,0 +1,10 @@
+.card {
+  background: var(--raised); border-radius: var(--r-card); box-shadow: var(--sh-raised);
+  padding: 22px; display: flex; flex-direction: column; gap: 22px;
+  width: 100%;
+}
+.header { display: flex; align-items: flex-start; gap: 14px; }
+.id { flex: 1; min-width: 0; }
+.name { font-family: var(--font-display); font-weight: 600; font-size: 26px; color: var(--text-1); line-height: 1.05; }
+.meta { font-family: var(--font-ui); font-size: 13.5px; color: var(--text-2); margin-top: 5px; line-height: 1.35; }
+.certs { display: flex; justify-content: space-between; padding: 0 4px; }
