@@ -57,3 +57,11 @@
   background: var(--well); box-shadow: var(--sh-raised); border-radius: var(--r-pill); padding: 16px;
   transition: transform .12s ease; }
 .signOut:active { transform: translateY(1px) scale(.98); }
+
+/* Reset demo — subtle secondary utility below Sign out */
+.reset { width: 100%; text-align: center; border: none; cursor: pointer;
+  font-family: var(--font-ui); font-weight: 500; font-size: 13px; color: var(--text-3);
+  background: transparent; border-radius: var(--r-pill); padding: 11px; margin-top: 6px;
+  transition: transform .12s ease, color .12s ease; }
+.reset:hover { color: var(--text-2); }
+.reset:active { transform: translateY(1px) scale(.98); }

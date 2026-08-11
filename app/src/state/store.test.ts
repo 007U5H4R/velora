@@ -52,6 +52,20 @@ describe('store loop', () => {
     s.getState().setRole('brand');
     expect(s.getState().role).toBe('brand');
   });
+  test('resetDemo restores the seeded baseline', () => {
+    const s = createStore({ vendorDeck: [v('a'), v('b')], rfps: [rfp('r1', 500)] });
+    s.getState().swipeVendor('like');   // vendorIndex → 1, activeMatch set
+    s.getState().createRfp({ title: 'x', category: '', units: 100, budgetMin: 0,
+      budgetMax: 0, shipBy: '', requirements: [] });   // rfps grows to 2
+    s.getState().setRole('manufacturer');
+    expect(s.getState().rfps.length).toBe(2);
+    s.getState().resetDemo();
+    expect(s.getState().vendorIndex).toBe(0);
+    expect(s.getState().activeMatch).toBeNull();
+    expect(s.getState().rfps.length).toBe(1);
+    expect(s.getState().rfps[0].id).toBe('r1');
+    expect(s.getState().role).toBe('brand');
+  });
 });
 
 test('appStore is seeded from mock data', () => {

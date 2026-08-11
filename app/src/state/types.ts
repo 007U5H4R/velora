@@ -52,4 +52,5 @@ export interface AppState {
   toggleSave(vendorId: string): void;
   openMatch(v: Vendor): void;
   closeMatch(): void;
+  resetDemo(): void;
 }

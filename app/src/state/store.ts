@@ -57,6 +57,21 @@ export function createStore(initial: Partial<AppState> = {}) {
     openMatch: (v: Vendor) => set({ activeMatch: v }),
     closeMatch: () => set({ activeMatch: null }),
 
+    // Reset every piece of demo state (swipe positions, created RFPs, submitted
+    // bids, matches, saved, chat, active match, role) back to the seeded baseline
+    // this store was created with. Actions are untouched (they're not in `initial`).
+    resetDemo: () => set(() => ({
+      role: 'brand',
+      vendorDeck: [], vendorIndex: 0,
+      rfpDeck: [], rfpIndex: 0,
+      rfps: [], bids: [],
+      matches: [], inboundLikes: [],
+      saved: [],
+      activeMatch: null,
+      chat: {},
+      ...initial,
+    })),
+
     ...initial,
   }));
 }

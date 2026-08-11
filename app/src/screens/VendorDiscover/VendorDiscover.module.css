@@ -11,8 +11,8 @@
 
 /* RfpDeckCard is denser than TrustCard (header + 2x2 stat grid + matches pill), so this
    box is taller than BuyerDiscover's 300px deckWrap — sized to the card's actual rendered
-   height (~378px) so the pagination dots below never overlap the card. */
-.deckWrap { position: relative; z-index: 1; width: 100%; max-width: 340px; height: 390px; margin: 6px auto 0; }
+   height (measured 404px) PLUS a gap so the pagination dots below never overlap the card. */
+.deckWrap { position: relative; z-index: 1; width: 100%; max-width: 340px; height: 424px; margin: 6px auto 0; }
 /* dots stack under the deck */
 .body :global(.dots), .body > :global(*) { z-index: 1; }
 

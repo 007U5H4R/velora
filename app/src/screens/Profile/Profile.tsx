@@ -20,6 +20,7 @@ export function Profile() {
   const nav = useNavigate();
   const role = useStore((s) => s.role);
   const switchRole = useStore((s) => s.switchRole);
+  const resetDemo = useStore((s) => s.resetDemo);
 
   // Persona (name/avatar/subline/trust score) is role-driven.
   // Trust score = the persona's REAL seed score (Noor 91 / Loomcraft 94) — frame 11's
@@ -99,6 +100,12 @@ export function Profile() {
             </div>
 
             <button className={styles.signOut} onClick={() => nav('/')}>Sign out</button>
+            <button
+              className={styles.reset}
+              onClick={() => { resetDemo(); nav('/'); }}
+            >
+              Reset demo
+            </button>
           </div>
         </div>
 
